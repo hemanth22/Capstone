@@ -4,7 +4,7 @@ pipeline {
       stage('Source Code') {
          agent { label 'test' }
          steps {
-            git 'https://github.com/hemanth22/intellipaatWebsite.git'
+            git 'https://github.com/hemanth22/Capstone.git'
          }
       }
       stage('Build') {
