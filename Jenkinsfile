@@ -35,7 +35,7 @@ pipeline {
       }
       stage('Deploy to prod server') {
          agent { label 'prod' }
-         when { env.BRANCH == 'master' }
+         when { branch 'devel' }
          steps {
             sh "docker rm -f \$(docker ps -q)"
             sh "docker rmi -f \$(docker images -q)"
