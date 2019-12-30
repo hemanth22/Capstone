@@ -4,7 +4,7 @@ pipeline {
       stage('Source Code') {
          agent { label 'test' }
          steps {
-            git 'https://github.com/hemanth22/Capstone.git'
+            git branch: 'devel', url: 'https://github.com/hemanth22/Capstone.git'
          }
       }
       stage('Build') {
@@ -35,7 +35,7 @@ pipeline {
       }
       stage('Deploy to prod server') {
          agent { label 'prod' }
-         when { branch 'devel' }
+         when { branch 'master' }
          steps {
             sh "docker rm -f \$(docker ps -q)"
             sh "docker rmi -f \$(docker images -q)"
