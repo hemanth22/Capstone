@@ -35,7 +35,6 @@ pipeline {
       }
       stage('Deploy to prod server') {
          agent { label 'prod' }
-         branch "master"
          when { env.BRANCH == 'master' }
          steps {
             sh "docker rm -f \$(docker ps -q)"
