@@ -1,2 +1,2 @@
-# Capstone
-Intellipaat capstone project
+# IntellipaatWebsite
+clone from https://github.com/hshar/website.git
