@@ -35,10 +35,11 @@ pipeline {
       }
       stage('Deploy to prod server') {
          agent { label 'prod' }
+         when {
          expression {
-             echo "BRANCH_NAME is ${env.BRANCH_NAME}"
-             return env.BRANCH_NAME == "master"
-         }
+              return env.GIT_BRANCH == "origin/master"
+              }
+         } 
          steps {
             git 'https://github.com/hemanth22/website.git'
             sh "docker build -t intellipaat:1.0 ."
