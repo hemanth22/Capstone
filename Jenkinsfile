@@ -35,7 +35,7 @@ pipeline {
       }
       stage('Deploy to prod server') {
          agent { label 'prod' }
-         when { branch 'master' }
+         branch "master"
          steps {
             git 'https://github.com/hemanth22/website.git'
             sh "docker build -t intellipaat:1.0 ."
