@@ -24,6 +24,7 @@ pipeline {
          steps {
             sh "hostname -I"
             sh "curl -I localhost:80"
+            sh "ansible-playbook webchecker.yml"
          }
       }
       stage('clean test server') {
@@ -40,7 +41,7 @@ pipeline {
          }
          steps {
             sh "docker rm -f intellipaat"
-            sh "docker rmi intellipaat:1.0"
+            sh "docker rmi -f intellipaat:1.0"
             git 'https://github.com/hemanth22/Capstone.git'
             sh "hostname -I"
             sh "docker build -t intellipaat:1.0 ."
