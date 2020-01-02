@@ -1,0 +1,10 @@
+---
+- name: Webtest
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Check if website is running.
+      uri:
+        url: "http://127.0.0.1:80/"
+
