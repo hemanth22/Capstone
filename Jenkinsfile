@@ -39,8 +39,8 @@ pipeline {
           branch 'master'
          }
          steps {
-            sh "docker rm -f \$(docker ps -q)"
-            sh "docker rmi -f \$(docker images -q)"
+            sh "docker rm -f intellipaat"
+            sh "docker rmi intellipaat:1.0"
             git 'https://github.com/hemanth22/Capstone.git'
             sh "hostname -I"
             sh "docker build -t intellipaat:1.0 ."
