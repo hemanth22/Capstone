@@ -6,7 +6,7 @@
   tasks:
     - name: Check if website is running.
       uri:
-        url: "http://127.0.0.1:82/"
+        url: "http://127.0.0.1/"
       retries: 60
       register: file_res
       changed_when: false
