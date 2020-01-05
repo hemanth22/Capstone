@@ -16,7 +16,7 @@ pipeline {
       stage('Run container') {
          agent { label 'test' }
          steps {
-            sh "docker run -d -p 80:80 --name=intellipaat intellipaat:1.0"
+            sh "docker run -d -p 82:80 --name=intellipaatweb intellipaat:1.0"
          }
       }
       stage('Website test') {
