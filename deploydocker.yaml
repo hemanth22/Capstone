@@ -1,0 +1,11 @@
+---
+- name: Deploy docker
+  hosts: localhost
+  become: true
+
+  tasks:
+  - name: Build image
+    shell: docker build -t intellipaat:1.0 .
+
+  - name: docker build -t intellipaat:1.0 .
+    shell: docker run -d -p 80:80 --name=intellipaat intellipaat:1.0
