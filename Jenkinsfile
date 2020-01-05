@@ -25,6 +25,7 @@ pipeline {
             sh "hostname -I"
             sh "curl -I localhost:80"
             sh "ansible-playbook webchecker.yml"
+            sh "java -jar website-testcase.jar"
          }
       }
       stage('clean test server') {
