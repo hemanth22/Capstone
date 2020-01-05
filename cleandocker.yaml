@@ -1,0 +1,13 @@
+---
+- name: clean production before new deployment
+  hosts: localhost
+  become: true
+
+  tasks:
+  - name: remove running container
+    shell: docker rm -f intellipaat
+    ignore_errors: true
+
+  - name: remove image
+    shell: docker rmi -f intellipaat:1.0
+    ignore_errors: true
