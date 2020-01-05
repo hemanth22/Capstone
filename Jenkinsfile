@@ -10,7 +10,7 @@ pipeline {
       stage('Build') {
          agent { label 'test' }
          steps {
-            sh "docker build -t intellipaat:1.0 ."
+            sh "docker build -t intellipaatweb:1.0 ."
          }
       }
       stage('Run container') {
