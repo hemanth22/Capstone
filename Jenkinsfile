@@ -1,7 +1,7 @@
 pipeline {
    agent none
    stages {
-      stage('Source Code') {
+      stage('Download Source Code') {
          agent { label 'test' }
          steps {
             git 'https://github.com/hemanth22/Capstone.git'
