@@ -23,6 +23,7 @@ pipeline {
          agent { label 'test' }
          steps {
             sh "hostname -I"
+            sh "curl -I localhost:80"
             sh "ansible-playbook webchecker.yml"
             sh "java -jar website-testcase.jar"
          }
