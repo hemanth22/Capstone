@@ -3,7 +3,7 @@
 | No. | Topics |
 | --- | --------- |
 |1  | [Capstone](./devops.md)  |
-|1  | [Capstone Architecture](./arch.md)  |
+|2  | [Capstone Architecture](./arch.md)  |
 
 ## About my blogs
 
