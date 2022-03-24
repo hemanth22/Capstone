@@ -1,2 +1,3 @@
 * [Home](/?id=table-of-contents) 
-* [Unix Commands](./UnixBasic.md)
+* [Capstone](./Devops.md)
+* [Capstone Architecture](./arch.md)
