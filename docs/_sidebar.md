@@ -1,3 +1,3 @@
 * [Home](/?id=table-of-contents) 
-* [Capstone](./Devops.md)
+* [Capstone](./devops.md)
 * [Capstone Architecture](./arch.md)
